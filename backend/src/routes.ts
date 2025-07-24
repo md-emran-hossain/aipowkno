@@ -1,7 +1,6 @@
 import { Application } from "express";
+import authRoutes from "./auth/auth.routes";
 
-// interface StaticRoutes extends RequestHandler {}
-
-export default (_: Application): void => {
-	// app.use("/api/static", staticRoutes as StaticRoutes);
+export default (app: Application): void => {
+	app.use("/auth", authRoutes);
 };

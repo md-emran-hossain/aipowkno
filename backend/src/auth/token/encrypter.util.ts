@@ -1,0 +1,27 @@
+import Cryptr from "cryptr";
+
+const cryptr = new Cryptr(process.env.JWT_ENCRYPTION_SECRET as string);
+
+interface Encrypter {
+	encrypt(token: string): string | null;
+	decrypt(encryptedToken: string): string | null;
+}
+
+const encrypter: Encrypter = {
+	encrypt(token: string): string | null {
+		try {
+			return cryptr.encrypt(token);
+		} catch (err) {
+			return null;
+		}
+	},
+	decrypt(encryptedToken: string): string | null {
+		try {
+			return cryptr.decrypt(encryptedToken);
+		} catch (err) {
+			return null;
+		}
+	}
+};
+
+export default encrypter;
