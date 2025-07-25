@@ -41,7 +41,7 @@ model article {
 model articleAuthors {
   articleId Int
   userId    Int
-  article   article @relation(fields: [articleId], references: [id])
+  article   article @relation(fields: [articleId], references: [id], onDelete: Cascade)
   user      user    @relation(fields: [userId], references: [id])
 
   @@id([articleId, userId])
@@ -59,7 +59,7 @@ model tag {
 model articleTag {
   articleId Int
   tagId     Int
-  article   article @relation(fields: [articleId], references: [id])
+  article   article @relation(fields: [articleId], references: [id], onDelete: Cascade)
   tag       tag     @relation(fields: [tagId], references: [id])
 
   @@id([articleId, tagId])
