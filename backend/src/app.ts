@@ -6,6 +6,7 @@ import notFound from "./error/notFound";
 const app = express();
 
 app.use(cors);
+app.use(express.json({ limit: "5mb" }));
 
 mapRoutes(app);
 
