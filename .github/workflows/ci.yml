@@ -1,0 +1,43 @@
+name: CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./backend
+      - name: Run lint
+        run: npm run lint
+        working-directory: ./backend
+      - name: Run tests
+        run: npm test
+        working-directory: ./backend
+      - name: Run format check
+        run: prettier --check .
+        working-directory: ./backend
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./frontend
+      - name: Run lint
+        run: npm run lint
+        working-directory: ./frontend
+      - name: Run format check
+        run: prettier --check .
+        working-directory: ./frontend
