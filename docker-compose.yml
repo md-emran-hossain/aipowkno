@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - db
+    networks:
+      - aipowkno-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_BACKEND_URL: http://localhost:4000
+    depends_on:
+      - backend
+    networks:
+      - aipowkno-network
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: aipowkno
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    networks:
+      - aipowkno-network
+
+volumes:
+  db-data:
+
+networks:
+  aipowkno-network:
+    driver: bridge
