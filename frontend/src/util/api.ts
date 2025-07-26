@@ -1,5 +1,6 @@
 import axios from "axios";
 import authTokenStorage from "@/storage/authTokenStorage";
+import "dotenv/config";
 
 const API = axios.create({
 	baseURL: process.env.NEXT_API_URL,
