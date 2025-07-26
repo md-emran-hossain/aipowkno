@@ -10,8 +10,6 @@ This repository contains a full-stack application for AI-powered knowledge manag
   - [Local Setup (Without Docker)](#local-setup-without-docker)
   - [Running with Docker Compose (Recommended)](#running-with-docker-compose-recommended)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
@@ -37,7 +35,7 @@ If you prefer to run the frontend and backend services directly on your machine 
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/aipowkno.git
+    git clone https://github.com/md-emran-hossain/aipowkno.git
     cd aipowkno
     ```
 
@@ -50,7 +48,7 @@ If you prefer to run the frontend and backend services directly on your machine 
     # Follow instructions in backend/README.md for installation, environment variables, and database setup
     npm install
     # Create .env file
-    npx prisma migrate dev --name init
+    npx prisma migrate dev
     npx prisma generate
     npm run dev
     ```
@@ -73,7 +71,7 @@ This is the easiest way to get the entire application stack (backend, frontend, 
 1.  **Clone the repository (if you haven't already):**
 
     ```bash
-    git clone https://github.com/your-username/aipowkno.git
+    git clone https://github.com/md-emran-hossain/aipowkno.git
     cd aipowkno
     ```
 
@@ -88,7 +86,7 @@ This is the easiest way to get the entire application stack (backend, frontend, 
     This command will:
     *   Build the Docker images for both the `backend` and `frontend` services.
     *   Start the PostgreSQL database container.
-    *   Start the backend service (accessible on port `3001`).
+    *   Start the backend service (accessible on port `4000`).
     *   Start the frontend service (accessible on port `3000`).
 
     The frontend application will be available at `http://localhost:3000`.
