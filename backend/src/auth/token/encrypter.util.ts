@@ -9,16 +9,16 @@ interface Encrypter {
 
 const encrypter: Encrypter = {
 	encrypt(token: string): string | null {
-		try {
-			return cryptr.encrypt(token);
-		} catch (err) {
-			return null;
-		}
+		  		try {
+  			return cryptr.encrypt(token);
+  		} catch {
+  			return null;
+  		}
 	},
 	decrypt(encryptedToken: string): string | null {
 		try {
 			return cryptr.decrypt(encryptedToken);
-		} catch (err) {
+		} catch {
 			return null;
 		}
 	}

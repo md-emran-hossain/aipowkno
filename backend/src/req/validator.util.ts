@@ -10,7 +10,7 @@ const isValidated =
 				params: req.params
 			});
 			next();
-		} catch (e: any) {
+		} catch (e) {
 			return res.status(400).send(e.errors);
 		}
 	};

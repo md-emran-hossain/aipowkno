@@ -1,14 +1,14 @@
 {
-  "useTabs": true,
-  "tabWidth": 2,
-  "semi": true,
-  "singleQuote": false,
-  "jsxSingleQuote": false,
-  "trailingComma": "none",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "avoid",
-  "importOrder": ["^[./]"],
-  "importOrderSortSpecifiers": true,
-  "importOrderGroupNamespaceSpecifiers": true
+	"useTabs": true,
+	"tabWidth": 2,
+	"semi": true,
+	"singleQuote": false,
+	"jsxSingleQuote": false,
+	"trailingComma": "none",
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"arrowParens": "avoid",
+	"importOrder": ["^[./]"],
+	"importOrderSortSpecifiers": true,
+	"importOrderGroupNamespaceSpecifiers": true
 }

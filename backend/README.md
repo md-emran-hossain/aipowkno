@@ -15,10 +15,10 @@ This is the backend application for the aipowkno project.
 
 Before you begin, ensure you have met the following requirements:
 
-*   Node.js (v20 or later)
-*   npm (v10 or later)
-*   Docker (if you plan to run with Docker)
-*   PostgreSQL database (or a compatible database for Prisma)
+- Node.js (v20 or later)
+- npm (v10 or later)
+- Docker (if you plan to run with Docker)
+- PostgreSQL database (or a compatible database for Prisma)
 
 ## Installation
 
