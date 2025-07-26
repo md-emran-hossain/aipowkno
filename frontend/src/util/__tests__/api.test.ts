@@ -16,7 +16,7 @@ describe('API Utility', () => {
 
     // Re-initialize API to pick up the mocked localStorage
     const newAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001',
+      baseURL: process.env.NEXT_API_URL || 'http://localhost:4000',
     });
 
     newAPI.interceptors.request.use((config) => {
@@ -34,7 +34,7 @@ describe('API Utility', () => {
     jest.spyOn(localStorage, 'getItem').mockReturnValue(null);
 
     const newAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001',
+      baseURL: process.env.NEXT_API_URL || 'http://localhost:4000',
     });
 
     newAPI.interceptors.request.use((config) => {

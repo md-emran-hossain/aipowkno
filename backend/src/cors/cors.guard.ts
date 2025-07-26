@@ -8,7 +8,7 @@ const allowedOrigins = [
 	"http://localhost:3000"
 ];
 
-const getOrigin = (_: Request) => {
+const getOrigin = () => {
 	return allowedOrigins;
 };
 

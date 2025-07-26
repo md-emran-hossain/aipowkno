@@ -39,7 +39,7 @@ Create a `.env` file in the `frontend` directory based on `.env.example`. You wi
 Example `.env`:
 
 ```
-NEXT_PUBLIC_BACKEND_URL="http://localhost:4000"
+NEXT_API_URL="http://localhost:4000"
 ```
 
 ## Running the Application
