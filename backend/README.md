@@ -41,9 +41,12 @@ Create a `.env` file in the `backend` directory based on `.env.example`. You wil
 Example `.env`:
 
 ```
-DATABASE_URL="postgresql://user:password@localhost:5432/mydatabase"
-JWT_SECRET="your_jwt_secret_key"
-PORT=3001
+API_HOST=http://localhost
+API_PORT=4000
+
+DATABASE_URL="postgresql://root:root@localhost:5432/aipowkno?schema=public"
+
+JWT_ENCRYPTION_SECRET=your_jwt_encryption_secret_key
 ```
 
 ## Database Setup
@@ -55,10 +58,8 @@ This project uses Prisma as its ORM. You need to set up your database and run Pr
 2.  Run Prisma migrations to set up your database schema:
 
     ```bash
-    npx prisma migrate dev --name init
+    npx prisma migrate dev
     ```
-
-    (Replace `init` with a descriptive name for your migration if it's not the first one.)
 
 3.  Generate Prisma client:
 
