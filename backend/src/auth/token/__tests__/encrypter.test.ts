@@ -1,5 +1,4 @@
 import encrypter from "../encrypter.util";
-import "dotenv/config";
 
 describe("Encrypter Utility", () => {
 	const testString = "Hello, World!";

@@ -1,4 +1,5 @@
 import Cryptr from "cryptr";
+import "dotenv/config";
 
 const cryptr = new Cryptr(process.env.JWT_ENCRYPTION_SECRET as string);
 
