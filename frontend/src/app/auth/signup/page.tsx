@@ -31,7 +31,7 @@ export default function SignUpPage() {
 		setIsSubmitting(true);
 
 		try {
-			const response = API.post("/auth/signup", formData)
+			API.post("/auth/signup", formData)
 				.then(res => res.data)
 				.then(res => {
 					authTokenStorage.setToken(res.token);
@@ -51,10 +51,10 @@ export default function SignUpPage() {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-			<div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-				<h1 className="text-2xl font-bold text-center text-gray-800">
-					Create Account
+		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-black p-4">
+			<div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+				<h1 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
+					Create account
 				</h1>
 
 				<form onSubmit={handleSubmit} className="space-y-4">
@@ -99,7 +99,7 @@ export default function SignUpPage() {
 								: "bg-blue-600 hover:bg-blue-700"
 						}`}
 					>
-						{isSubmitting ? "Processing..." : "Sign Up"}
+						{isSubmitting ? "Processing..." : "Sign up"}
 					</button>
 				</form>
 
@@ -118,7 +118,7 @@ export default function SignUpPage() {
 				<p className="text-center text-sm text-gray-600">
 					Already have an account?{" "}
 					<a href="/auth/signin" className="text-blue-600 hover:underline">
-						Sign In
+						Sign in
 					</a>
 				</p>
 			</div>
