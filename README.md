@@ -116,11 +116,3 @@ aipowkno/
 ├── docker-compose.yml   # Docker Compose configuration for the entire stack
 └── README.md            # Project overview README (this file)
 ```
-
-## Contributing
-
-Feel free to fork the repository and contribute. Please ensure your code adheres to the existing style and passes all tests.
-
-## License
-
-[Specify your license here, e.g., MIT, Apache 2.0, etc.]
